@@ -4,7 +4,8 @@ WORKDIR /go/src/aspiratv
 
 RUN apk add git
 
-RUN git clone https://github.com/simulot/aspiratv.git .
+RUN git clone https://github.com/simulot/aspiratv.git . \
+  && git checkout v0.12.0
 
 RUN go install -v ./...
 
